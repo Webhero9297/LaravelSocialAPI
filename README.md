@@ -249,3 +249,33 @@ status | 200
 message | OK
 data | array
 status  | HTTP_OK
+
+### 4. Store Public Profile
+#### Public profile insert/update API
+
+**route:**
+{Prefix}/store_public_profile
+
+**request param:**
+param name | type | isOptional? | description
+---------- | ---- | ----------- | -------
+profile_id | string | No | if 'NULL'-insert, otherwise - update
+name | string | No | public profile name
+address | string | Yes | address
+contact_email | string | Yes | contact email address
+contact_phone_number | string | Yes | contact email phone number
+country | string | Yes | country if not defined, 'US'
+photo | file | Yes | public profile avatar image, if not defined, default unknown iamge link
+bio | file | NO | bio
+is_distributor | int | Yes | default 0, 0 - merchant, 1- distributor
+is_available_payment | int | Yes | default 0
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+status | int | status code
+message | string | action result message string
+status | int | rest API execution status code
+code | string | error code
+
