@@ -55,3 +55,16 @@ param | content
 success | true
 token | string
 status  | HTTP_OK
+
+### 3. Social Login or Register
+#### Social Login API
+
+**route:**
+{Prefix}/social/redirect/{provider}
+####Provider - [apple, google, facebook, twitter]
+
+**request param:**
+NONE
+
+**response param**
+response result format is the same with login
