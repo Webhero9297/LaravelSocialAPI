@@ -42,12 +42,14 @@ token | string | -
 
 ***Example***
 In fail case: 
+param | content
 -------- | --------
 success | false
 message | Invalid Email Or Password
 status  | HTTP_UNAUTHORIZED
 
-In success case: 
+In success case:
+param | content 
 -------- | --------
 success | false
 token | string
