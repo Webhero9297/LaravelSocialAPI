@@ -279,3 +279,42 @@ message | string | action result message string
 status | int | rest API execution status code
 code | string | error code
 
+### 5. Update Public Profile available payment
+####  Update Public Profile available payment
+
+**route:**
+{Prefix}/update_available_payment
+
+**request param:**
+param name | type | isOptional? | description
+---------- | ---- | ----------- | -------
+is_available_payment | int | Yes | default 0
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+status | int | status code
+message | string | action result message string
+status | int | rest API execution status code
+code | string | error code
+
+### 6. Update Public Profile distributor status
+####  Update Public Profile distributor status
+
+**route:**
+{Prefix}/update_distributor
+
+**request param:**
+param name | type | isOptional? | description
+---------- | ---- | ----------- | -------
+is_distributor | int | Yes | default 0
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+status | int | status code
+message | string | action result message string
+status | int | rest API execution status code
+code | string | error code
