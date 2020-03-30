@@ -68,3 +68,5 @@ NONE
 
 **response param**
 response result format is the same with login
+
+These APIs are unathorized APIs, so when use these apis on the endpoint, don't worry about the authorized token.
