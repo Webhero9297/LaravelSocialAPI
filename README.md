@@ -265,7 +265,7 @@ address | string | Yes | address
 contact_email | string | Yes | contact email address
 contact_phone_number | string | Yes | contact email phone number
 country | string | Yes | country if not defined, 'US'
-photo | file | Yes | public profile avatar image, if not defined, default unknown iamge link
+photo | file | Yes | public profile avatar image, if not defined, default unknown image link
 bio | file | NO | bio
 is_distributor | int | Yes | default 0, 0 - merchant, 1- distributor
 is_available_payment | int | Yes | default 0
