@@ -38,7 +38,7 @@ param | type | description
 ----- | ---- | -------
 success | bool | -
 message | string | -
-token | string | -
+token | token string | -
 
 ***Example***
 
@@ -53,7 +53,7 @@ In success case:
 param | content 
 -------- | --------
 success | true
-token | string
+token | token string
 status  | HTTP_OK
 
 ### 3. Social Login or Register
@@ -61,7 +61,7 @@ status  | HTTP_OK
 
 **route:**
 {Prefix}/social/redirect/{provider}
-####Provider - [apple, google, facebook, twitter]
+#### Provider - [apple, google, facebook, twitter]
 
 **request param:**
 NONE
@@ -73,8 +73,10 @@ These APIs are unathorized APIs, so when use these apis on the endpoint, don't w
 
 ## Authorized API List
 When use the follwing apis, you have to define 'Authorization' item in the request header.
-refer this screen
-[link](https://prnt.sc/rpjlxf)
+refer this screen.
+
+![Screen](https://prnt.sc/rpjlxf)
+
 Regarding 'Authorization' header item, when these apis are called on the endpoint, exceptions occured from the backend
 
 params | content
