@@ -212,7 +212,7 @@ status | 200
 message | Spcified order Status record just deleted successfully
 status  | HTTP_OK
 
-### 3. List od Base Order Status
+### 3. List of Base Order Status
 #### Base Order Status List API
 
 **route:**
