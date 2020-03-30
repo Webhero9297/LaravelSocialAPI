@@ -75,7 +75,7 @@ These APIs are unathorized APIs, so when use these apis on the endpoint, don't w
 When use the follwing apis, you have to define 'Authorization' item in the request header.
 refer this screen.
 
-![Screen](https://prnt.sc/rpjlxf)
+![Screen](/images/header_authorized.png)
 
 Regarding 'Authorization' header item, when these apis are called on the endpoint, exceptions occured from the backend
 
