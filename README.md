@@ -41,6 +41,7 @@ message | string | -
 token | string | -
 
 ***Example***
+
 In fail case: 
 param | content
 -------- | --------
@@ -51,6 +52,6 @@ status  | HTTP_UNAUTHORIZED
 In success case:
 param | content 
 -------- | --------
-success | false
+success | true
 token | string
 status  | HTTP_OK
