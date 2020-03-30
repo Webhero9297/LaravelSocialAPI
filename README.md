@@ -3,8 +3,8 @@
 - Prefix {BASE URI}/api/
 
 ## API List
-1. Register
-    ##### User register API. Not social register
+### 1. Register
+#### User register API. Not social register
     route: {Prefix}/register
     request param: 
       name
