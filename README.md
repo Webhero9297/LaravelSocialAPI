@@ -101,7 +101,6 @@ message | string | logout status string
 **request param:**
 param name | type | description
 ---------- | ---- | -------
-profile_id | string |if 'NULL'-insert, otherwise - update (Optional)
 name | string | public profile name (Optional when update)
 address | string | address  (Optional when update)
 contact_email | string | contact email address  (Optional when update)
