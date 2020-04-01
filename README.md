@@ -286,3 +286,135 @@ param | type | description
 success | bool | true - success, false - fail
 error | array | error status - [code, message]
 message | string | action result message string
+
+### 11. Delete Order API
+####  Action: delete the specific order that the current user made.
+#### This API is valid for the only users of which is_distributor is 0. Otherwise, exception will occur.
+
+**route:** /delete_order
+
+**request param:**
+param name | type | description
+---------- | ---- | -------
+order_id | int | order_id
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+message | string | action result message string
+
+
+### 12. change order product status
+####  Action: change arrived/not arrived status of product in specific order
+#### This API is valid for the only users of which is_distributor is 0. Otherwise, exception will occur.
+
+**route:** /change_order_product_status
+
+**request param:**
+param name | type | description
+---------- | ---- | -------
+order_product_id | int | order_product_id
+product_status | int | product_status (0, 1)
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+message | string | action result message string
+
+### 13. Rate to distributor
+####  Action: with order, insert or update rate to specific distributor
+#### This API is valid for the only users of which is_distributor is 0. Otherwise, exception will occur.
+
+**route:** /upsert_rate
+
+**request param:**
+param name | type | description
+---------- | ---- | -------
+distributor_id | int | distributor_id
+order_id | int | order_id
+score | int | 1-5
+title | string | rate title
+comment | string | rate comment
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+message | string | action result message string
+
+### 14. delete rate
+####  Action: delete rate
+#### This API is valid for the only users of which is_distributor is 0. Otherwise, exception will occur.
+
+**route:** /delete_rate
+
+**request param:**
+param name | type | description
+---------- | ---- | -------
+rate_id | int | rate_id
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+message | string | action result message string
+
+### 15. like distributor
+####  Action: like/unlike distributor
+#### This API is valid for the only users of which is_distributor is 0. Otherwise, exception will occur.
+
+**route:** /like_distributor
+
+**request param:**
+param name | type | description
+---------- | ---- | -------
+distributor_id | int | distributor_id
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+message | string | action result message string
+
+### 16. like product
+####  Action: like/unlike product
+#### This API is valid for the only users of which is_distributor is 0. Otherwise, exception will occur.
+
+**route:** /like_product
+
+**request param:**
+param name | type | description
+---------- | ---- | -------
+product_id | int | product_id
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+message | string | action result message string
+
+### 17. Helpful
+####  Action: helpful
+#### This API is valid for the only users of which is_distributor is 0. Otherwise, exception will occur.
+
+**route:** /helpful
+
+**request param:**
+param name | type | description
+---------- | ---- | -------
+rate_id | int | rate_id
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+message | string | action result message string
