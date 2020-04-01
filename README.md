@@ -1,18 +1,26 @@
 # LaravelSocialAPI
 
-- Prefix {BASE URI}/api/
+- Prefix = {BASE URL}/api/
+
+*** Error code ***
+Code | description
+---------- | ---- 
+6001 | Invalid param
+6002 | Invalid distributor
+6003 | Order fail
+6004 | Bad request
 
 ## UnAuthorized API List
 ### 1. Register
 #### User register API. Not social register
 
 **route:**
-{Prefix}/register
+route: /register
 
 **request param:**
 param name | type | isOptional? | description
 ---------- | ---- | ----------- | -------
-name | string | No | User name
+username | string | No | User name
 email | string | No | User email
 password | string | No | User password
 
@@ -20,31 +28,26 @@ password | string | No | User password
 param | type | description
 ----- | ---- | -------
 success | bool | true - register successfully, false - fail
-status | int | status code
+error | string | error - [code, message]
 token | string | token string
-
-##### status - 404 , message - This emailed user is already exists
-##### status - 403 , message - Exception error
-##### status - 200 , message - ''
 
 ### 2. Login
 #### User Login API. Not social register
 
 **route:**
-{Prefix}/register
+route: /login
 
 **request param:**
 param name | type | isOptional? | description
 ---------- | ---- | ----------- | -------
-email | string | No | User email
-password | string | No | User password
+username | string | No | Username
+password | string | No | Password
 
 **response param**
 param | type | description
 ----- | ---- | -------
-success | bool | -
-status | int | -
-message | string | -
+success | bool | true - 200, false - error
+error | array | [code, message]
 token | token string | -
 
 ***Example***
