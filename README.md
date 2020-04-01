@@ -14,8 +14,7 @@ Code | description
 ### 1. Register
 #### User register API. Not social register
 
-**route:**
-route: /register
+**route:** /register
 
 **request param:**
 param name | type | description
@@ -34,8 +33,7 @@ token | string | token string
 ### 2. Login
 #### User Login API. Not social login
 
-**route:**
-route: /login
+**route:**  /login
 
 **request param:**
 param name | type | description
@@ -83,8 +81,7 @@ status | success | message
 ### 1. Logout
 #### User logout API
 
-**route:**
-route: /logout
+**route:** /logout
 
 **request param:**
 NONE
@@ -99,8 +96,7 @@ message | string | logout status string
 ### 2. Insert/Update API for Public Profile
 #### Action: insert/update
 
-**route:**
-route: /upsert_public_profile
+**route:** /upsert_public_profile
 
 **request param:**
 param name | type | description
@@ -125,8 +121,7 @@ error | array | error status - [code, message]
 ### 3. Delete API for Public Profile
 #### Action: delete
 
-**route:**
-route: /delete_public_profile
+**route:** /delete_public_profile
 
 **request param:**
 param name | type | description
@@ -143,8 +138,7 @@ message | string | result message
 ### 4. Update Public Profile available payment
 ####  Update is_available_payment property of Public Profile
 
-**route:**
-route: /update_is_available_payment
+**route:** /update_is_available_payment
 
 **request param:**
 param name | type | description
@@ -161,8 +155,7 @@ message | string | action result message string
 ### 5. Update Public Profile distributor status
 ####  Update is_distributor property of Public Profile
 
-**route:**
-route: /update_is_distributor
+**route:** /update_is_distributor
 
 **request param:**
 param name | type | description
@@ -180,8 +173,7 @@ message | string | action result message string
 ####  Action: Product Insert/Update
 #### This API is valid for the only users of which is_distributor is 1. Otherwise, exception will occur.
 
-**route:**
-route: /upsert_product
+**route:** /upsert_product
 
 **request param:**
 param name | type | description
@@ -206,8 +198,7 @@ message | string | action result message string
 ####  Action: Product Delete
 #### This API is valid for the only users of which is_distributor is 1. Otherwise, exception will occur.
 
-**route:**
-route: /delete_product
+**route:** /delete_product
 
 **request param:**
 param name | type | description
