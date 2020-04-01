@@ -107,7 +107,7 @@ contact_email | string | contact email address  (Optional when update)
 contact_phone_number | string | contact email phone number (Optional)
 country | string | country if not defined, 'US' (Optional)
 photo | file | public profile avatar image, if not defined, default unknown image link (Optional)
-bio | file | bio (Optional)
+bio | string | bio (Optional)
 is_distributor | int | default 0, 0 - merchant, 1- distributor (Optional)
 is_available_payment | int | default 0 (Optional)
 
