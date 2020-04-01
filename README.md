@@ -103,8 +103,8 @@ param name | type | description
 ---------- | ---- | -------
 profile_id | string |if 'NULL'-insert, otherwise - update (Optional)
 name | string | public profile name
-address | string | address (Optional)
-contact_email | string | contact email address (Optional)
+address | string | address 
+contact_email | string | contact email address 
 contact_phone_number | string | contact email phone number (Optional)
 country | string | country if not defined, 'US' (Optional)
 photo | file | public profile avatar image, if not defined, default unknown image link (Optional)
