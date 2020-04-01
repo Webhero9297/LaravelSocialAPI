@@ -475,3 +475,21 @@ param | type | description
 success | bool | true - success, false - fail
 error | array | error status - [code, message]
 profile | array | profile data
+
+```
+{
+    "status": 200,
+    "success": true,
+    "profile": {
+        "name": "Tester1",
+        "country": "US",
+        "address": "Tester1 Address",
+        "contact_email": "mail.com",
+        "contact_phone_number": null,
+        "photo": "http://192.168.1.12:5000/public/uploads//unknown_public_profile_avatar.png",
+        "bio": "This is good for us. Hello",
+        "is_distributor": 1,
+        "is_available_payment": 0
+    }
+}
+```
