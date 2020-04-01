@@ -50,23 +50,6 @@ success | bool | true - 200, false - error
 error | array | [code, message]
 token | token string | -
 
-***Example***
-
-In fail case: 
-param | content
--------- | --------
-success | false
-stratus | 404
-message | Invalid Email Or Password
-status  | HTTP_UNAUTHORIZED
-
-In success case:
-param | content 
--------- | --------
-success | true
-status | 200
-token | token string
-status  | HTTP_OK
 
 ### 3. Social Login or Register
 #### Social Login API
@@ -101,7 +84,7 @@ status | success | message
 #### User logout API
 
 **route:**
-{Prefix}/logout
+route: /logout
 
 **request param:**
 NONE
@@ -110,214 +93,130 @@ NONE
 param | type | description
 ----- | ---- | -------
 success | bool | true - register successfully, false - fail
-status | int | logout status code
+error | array | logout error status [code, message]
 message | string | logout status string
 
-***Example***
-
-In fail case: 
-param | content
--------- | --------
-success | false
-status | 404
-message | Sorry, the user cannot be logged out
-status  | HTTP_INTERNAL_SERVER_ERROR
-
-In success case:
-param | content 
--------- | --------
-success | true
-status | 200
-message | User logged out successfully
-status  | HTTP_OK
-
-### 2. Store Base Order Status
-#### Base Order Status Insert/Update API
+### 2. Insert/Update API for Public Profile
+#### Action: insert/update
 
 **route:**
-{Prefix}/store_base_order_status
+route: /upsert_public_profile
 
 **request param:**
-param name | type | isOptional? | description
----------- | ---- | ----------- | -------
-status_id | string | No | 'NULL' - insert, int - update
-status_name | string | No | status name string
+param name | type | description
+---------- | ---- | -------
+profile_id | string |if 'NULL'-insert, otherwise - update (Optional)
+name | string | public profile name
+address | string address (Optional)
+contact_email | string | contact email address (Optional)
+contact_phone_number | string | contact email phone number (Optional)
+country | string | country if not defined, 'US' (Optional)
+photo | file | public profile avatar image, if not defined, default unknown image link (Optional)
+bio | file | bio (Optional)
+is_distributor | int | default 0, 0 - merchant, 1- distributor (Optional)
+is_available_payment | int | default 0 (Optional)
 
 **response param**
 param | type | description
 ----- | ---- | -------
 success | bool | true - success, false - fail
-status | int | result status code
-message | string | action result message string
+error | array | error status - [code, message]
 
-***Example***
-
-In fail case: 
-***status_id is Int and it is not exists in the DB***
-
-param | content
--------- | --------
-success | false
-status | 404
-message | Spcified order status record not found
-status  | HTTP_INTERNAL_SERVER_ERROR
-
-***status_id is 'NULL' and DB connection is fail***
-
-param | content
--------- | --------
-success | false
-status | 402
-message | Spcified order status record cannot create
-status  | HTTP_INTERNAL_SERVER_ERROR
-
-In success case:
-param | content 
--------- | --------
-success | true
-status | 200
-message | Order Status record created successfully
-status  | HTTP_OK
-
-### 3. Delete Base Order Status
-#### Base Order Status Delete API
+### 3. Delete API for Public Profile
+#### Action: delete
 
 **route:**
-{Prefix}/delete_base_order_status
+route: /delete_public_profile
 
 **request param:**
-param name | type | isOptional? | description
----------- | ---- | ----------- | -------
-status_id | string | No | status record id as int 
+param name | type | description
+---------- | ---- | -------
+profile_id | int | profile id
 
 **response param**
 param | type | description
 ----- | ---- | -------
 success | bool | true - success, false - fail
-status | int | status code
-message | string | action result message string
+error | array | error status - [code, message]
+message | string | result message
 
-***Example***
-
-In fail case: 
-param | content
--------- | --------
-success | false
-status | 404
-message | Spcified order status record not found
-status  | HTTP_INTERNAL_SERVER_ERROR
-
-In success case:
-param | content 
--------- | --------
-success | true
-status | 200
-message | Spcified order Status record just deleted successfully
-status  | HTTP_OK
-
-### 3. List of Base Order Status
-#### Base Order Status List API
+### 4. Update Public Profile available payment
+####  Update is_available_payment property of Public Profile
 
 **route:**
-{Prefix}/list_base_order_status
+route: /update_is_available_payment
 
 **request param:**
-NONE
+param name | type | description
+---------- | ---- | -------
+is_available_payment | int | default 0
 
 **response param**
 param | type | description
 ----- | ---- | -------
 success | bool | true - success, false - fail
-status | int | status code
+error | array | error status - [code, message]
 message | string | action result message string
-status | int | rest API execution status code
-data | array | order status data array { [status_id, status_name], ...}
 
-***Example***
-
-In fail case: 
-param | content
--------- | --------
-success | false
-status | 401
-message | DB connection error
-data | []
-status  | HTTP_INTERNAL_SERVER_ERROR
-
-In success case:
-param | content 
--------- | --------
-success | true
-status | 200
-message | OK
-data | array
-status  | HTTP_OK
-
-### 4. Store Public Profile
-#### Public profile insert/update API
+### 5. Update Public Profile distributor status
+####  Update is_distributor property of Public Profile
 
 **route:**
-{Prefix}/store_public_profile
+route: /update_is_distributor
 
 **request param:**
-param name | type | isOptional? | description
----------- | ---- | ----------- | -------
-profile_id | string | No | if 'NULL'-insert, otherwise - update
-name | string | No | public profile name
-address | string | Yes | address
-contact_email | string | Yes | contact email address
-contact_phone_number | string | Yes | contact email phone number
-country | string | Yes | country if not defined, 'US'
-photo | file | Yes | public profile avatar image, if not defined, default unknown image link
-bio | file | NO | bio
-is_distributor | int | Yes | default 0, 0 - merchant, 1- distributor
-is_available_payment | int | Yes | default 0
+param name | type | description
+---------- | ---- | -------
+is_distributor | int | default 0
 
 **response param**
 param | type | description
 ----- | ---- | -------
 success | bool | true - success, false - fail
-status | int | status code
+error | array | error status - [code, message]
 message | string | action result message string
-status | int | rest API execution status code
-code | string | error code
 
-### 5. Update Public Profile available payment
-####  Update Public Profile available payment
+### 6. Upsert Product
+####  Action: Product Insert/Update
+#### This API is valid for the only users of which is_distributor is 1. Otherwise, exception will occur.
 
 **route:**
-{Prefix}/update_available_payment
+route: /upsert_product
 
 **request param:**
-param name | type | isOptional? | description
----------- | ---- | ----------- | -------
-is_available_payment | int | Yes | default 0
+param name | type | description
+---------- | ---- | -------
+product_id | string | If 'NULL' - Insert, else int - update, otherwise - exception, this field is optional. But if omitted, API will perform insert action.
+name | string | product name
+unit | string | product unit
+photo | file array | product photo(optional)
+price | float | price (optional) - if omitted, price will be setted 0.
+stock | float | stock (optional) - if omitted, stock will be setted 0.
+discount_percentage | float | discount_percentage (optional) - if omitted, dicount_percentage will be setted 0.
+discription | float | discription (optional) - if omitted, description will be setted 0.
 
 **response param**
 param | type | description
 ----- | ---- | -------
 success | bool | true - success, false - fail
-status | int | status code
+error | array | error status - [code, message]
 message | string | action result message string
-status | int | rest API execution status code
-code | string | error code
 
-### 6. Update Public Profile distributor status
-####  Update Public Profile distributor status
+### 7. Delete Product
+####  Action: Product Delete
+#### This API is valid for the only users of which is_distributor is 1. Otherwise, exception will occur.
 
 **route:**
-{Prefix}/update_distributor
+route: /delete_product
 
 **request param:**
-param name | type | isOptional? | description
----------- | ---- | ----------- | -------
-is_distributor | int | Yes | default 0
+param name | type | description
+---------- | ---- | -------
+product_id | int | If int - delete, otherwise - exception
 
 **response param**
 param | type | description
 ----- | ---- | -------
 success | bool | true - success, false - fail
-status | int | status code
+error | array | error status - [code, message]
 message | string | action result message string
-status | int | rest API execution status code
-code | string | error code
