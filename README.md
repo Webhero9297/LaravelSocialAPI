@@ -18,11 +18,11 @@ Code | description
 route: /register
 
 **request param:**
-param name | type | isOptional? | description
----------- | ---- | ----------- | -------
-username | string | No | User name
-email | string | No | User email
-password | string | No | User password
+param name | type | description
+---------- | ---- | -------
+username | string | User name
+email | string | User email
+password | string | User password
 
 **response param**
 param | type | description
@@ -38,10 +38,10 @@ token | string | token string
 route: /login
 
 **request param:**
-param name | type | isOptional? | description
----------- | ---- | ----------- | -------
-username | string | No | Username
-password | string | No | Password
+param name | type | description
+---------- | ---- | -------
+username | string | Username
+password | string | Password
 
 **response param**
 param | type | description
