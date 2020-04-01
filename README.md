@@ -1,6 +1,6 @@
 # LaravelSocialAPI
 
-- Prefix = {BASE URL}/api/
+- Prefix = {BASE URL}/api
 
 *** Error code ***
 Code | description
