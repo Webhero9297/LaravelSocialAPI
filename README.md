@@ -179,8 +179,8 @@ param name | type | description
 ---------- | ---- | -------
 product_id | string | If 'NULL' - Insert, else int - update, otherwise - exception, this field is optional. But if omitted, API will perform insert action.
 name | string | product name
-unit | string | product unit
-photo | file array | product photo(optional)
+unit | string | product unit (optional)
+photo | file array | product photo (optional)
 price | float | price (optional) - if omitted, price will be setted 0.
 stock | float | stock (optional) - if omitted, stock will be setted 0.
 discount_percentage | float | discount_percentage (optional) - if omitted, dicount_percentage will be setted 0.
