@@ -211,3 +211,75 @@ param | type | description
 success | bool | true - success, false - fail
 error | array | error status - [code, message]
 message | string | action result message string
+
+### 8. Upsert Product Photo
+####  Action: Product Photo Insert or Update
+#### This API is valid for the only users of which is_distributor is 1. Otherwise, exception will occur.
+
+**route:** /upsert_product_photo
+
+**request param:**
+param name | type | description
+---------- | ---- | -------
+product_id | int | product_id
+product_photo_id | int | product_photo_id
+photo | file | photo image file (Optional)
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+message | string | action result message string
+
+### 9. Delete Product Photo
+####  Action: Product Photo Delete
+#### This API is valid for the only users of which is_distributor is 1. Otherwise, exception will occur.
+
+**route:** /delete_product_photo
+
+**request param:**
+param name | type | description
+---------- | ---- | -------
+product_photo_id | int | product_photo_id
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+message | string | action result message string
+
+### 10. New Order API
+####  Action: Insert / Update of Order
+#### This API is valid for the only users of which is_distributor is 0. Otherwise, exception will occur.
+
+**route:** /upsert_order
+
+**request param:**
+param name | type | description
+---------- | ---- | -------
+distributor_id | int | distributor_id
+order_id | string | If 'NULL' - Insert, else int - update, otherwise - exception. this field is optional. But if omitted, API will perform insert action.
+order_product | json array | JSON format of order product. ex:) 
+  [
+    {
+      "order_product_id": "NULL", ---> Insert, if this item is omitted, Insert
+      "product_id": 2,
+      "price": 2,
+      "count": 1,
+      "product_name": "Food 1"
+    },
+    {
+      "product_id": 3, ---> Update
+      "price": 20,
+      "count": 2,
+      "product_name": "Food 2"
+    }
+  ]
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+message | string | action result message string
