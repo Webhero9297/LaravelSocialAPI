@@ -102,9 +102,9 @@ message | string | logout status string
 param name | type | description
 ---------- | ---- | -------
 profile_id | string |if 'NULL'-insert, otherwise - update (Optional)
-name | string | public profile name
-address | string | address 
-contact_email | string | contact email address 
+name | string | public profile name (Optional when update)
+address | string | address  (Optional when update)
+contact_email | string | contact email address  (Optional when update)
 contact_phone_number | string | contact email phone number (Optional)
 country | string | country if not defined, 'US' (Optional)
 photo | file | public profile avatar image, if not defined, default unknown image link (Optional)
