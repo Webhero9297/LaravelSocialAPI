@@ -418,3 +418,43 @@ param | type | description
 success | bool | true - success, false - fail
 error | array | error status - [code, message]
 message | string | action result message string
+
+### 18. RateReport
+####  Action: RateReport
+#### This API is valid for the only users of which is_distributor is 1. Otherwise, exception will occur.
+
+**route:** /rate_report
+
+**request param:**
+param name | type | description
+---------- | ---- | -------
+rate_id | int | rate_id
+title | int | title
+comment | int | comment
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+message | string | action result message string
+
+### 19. ProfileReport
+####  Action: ProfileReport
+#### This API is valid for the only users of which is_distributor is 1. Otherwise, exception will occur.
+
+**route:** /profile_report
+
+**request param:**
+param name | type | description
+---------- | ---- | -------
+distributor_id | int | distributor_id
+title | int | title
+comment | int | comment
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+message | string | action result message string
