@@ -458,3 +458,20 @@ param | type | description
 success | bool | true - success, false - fail
 error | array | error status - [code, message]
 message | string | action result message string
+
+### 20. Get My Profile
+####  Action: Get Public profile of Auth user
+#### This API is valid for the only users of which is_distributor is 1. Otherwise, exception will occur.
+
+**route:** /get_my_profile
+
+**request param:**
+
+NONE
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+profile | array | profile data
