@@ -32,7 +32,7 @@ error | string | error - [code, message]
 token | string | token string
 
 ### 2. Login
-#### User Login API. Not social register
+#### User Login API. Not social login
 
 **route:**
 route: /login
