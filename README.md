@@ -621,3 +621,64 @@ profile | array | profile data
     ]
 }
 ```
+
+
+### 23. Get About info of distributor
+####  Action: Get About info of distributor
+#### This is Non-Authorization API
+
+**route:** /get_about_of_distributor
+
+**request param:**
+param | type | description
+----- | ---- | -------
+distributor_id | int | 
+
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+profile | array | profile data
+
+
+### 24. Get reviews info of distributor
+####  Action: Get reviews info of distributor
+#### This is Non-Authorization API
+
+**route:** /get_reviews_of_distributor
+
+**request param:**
+param | type | description
+----- | ---- | -------
+distributor_id | int | 
+pos | int | Optional
+limit | int | Optional
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+profile | array | profile data
+
+### 25. Get products info of distributor
+####  Action: Get products info of distributor
+#### This is Authorization or Non-Authorization API
+
+**route:** /get_products_of_distributor
+
+**request param:**
+param | type | description
+----- | ---- | -------
+distributor_id | int | 
+pos | int | Optional
+limit | int | Optional
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+profile | array | profile data
