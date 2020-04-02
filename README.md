@@ -561,3 +561,63 @@ profile | array | profile data
     ]
 }
 ```
+
+
+### 22. Get My Products
+####  Action: Get My Products list 
+#### This API can be called from Authed
+
+**route:** /get_my_products
+
+**request param:**
+
+NONE
+
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+profile | array | profile data
+
+```
+{
+    "success": true,
+    "profile": [
+        {
+            "product_id": 1,
+            "name": "Food 1",
+            "description": "This product is for youth",
+            "price": 2,
+            "stock": 10,
+            "unit": "1L",
+            "discount_percentage": 0,
+            "created_at": 1585626491,
+            "updated_at": 1585854061,
+            "product_photos": [
+                "http://192.168.1.12:5000/public/uploads/products/product_avatar_1585672441_2067187511.jpg",
+                "http://192.168.1.12:5000/public/uploads/products/product_avatar_1585672492_944178197.jpg",
+                "http://192.168.1.12:5000/public/uploads/unknown_product.png"
+            ]
+        },
+        ...
+        {
+            "product_id": 5,
+            "name": "Food 5",
+            "description": "Food 5 Description",
+            "price": 20,
+            "stock": 15,
+            "unit": "1L",
+            "discount_percentage": 0,
+            "created_at": 1585634287,
+            "updated_at": 1585673145,
+            "product_photos": [
+                "http://192.168.1.12:5000/public/uploads/products/product_avatar_1585672573_1215780409.jpg",
+                "http://192.168.1.12:5000/public/uploads/products/product_avatar_1585672578_454042296.jpg",
+                "http://192.168.1.12:5000/public/uploads/unknown_product.png"
+            ]
+        }
+    ]
+}
+```
