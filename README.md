@@ -524,12 +524,12 @@ profile | array | profile data
             "name": "User5",
             "photo": "http://192.168.1.12:5000/public/uploads/public_profiles/profile_avatar_1585662833_608928871.jpg",
             "rate_count": 2,
-            "avg_score": "5.0",
+            "avg_score": 4.5,
             "product_count": 5,
             "pending_orders_count": 5,
             "processed_order_count": 1,
             "last_delivery_date": "2020-04-01 18:14:20",
-            "like_status": 1,
+            "is_liked": 1,
             "like_date": "2020-03-31 19:37:13"
         },
         {
@@ -537,12 +537,12 @@ profile | array | profile data
             "name": "Josph Lee",
             "photo": "http://192.168.1.12:5000/public/uploads/unknown_public_profile_avatar.png",
             "rate_count": 0,
-            "avg_score": "0.0",
+            "avg_score": 0,
             "product_count": 0,
             "pending_orders_count": 3,
             "processed_order_count": 0,
             "last_delivery_date": "-",
-            "like_status": 0,
+            "is_liked": 0,
             "like_date": "-"
         },
         {
@@ -550,12 +550,12 @@ profile | array | profile data
             "name": "Tester1",
             "photo": "http://192.168.1.12:5000/public/uploads/unknown_public_profile_avatar.png",
             "rate_count": 0,
-            "avg_score": "0.0",
+            "avg_score": 0,
             "product_count": 1,
             "pending_orders_count": 5,
             "processed_order_count": 0,
             "last_delivery_date": "-",
-            "like_status": 0,
+            "is_liked": 0,
             "like_date": "-"
         }
     ]
