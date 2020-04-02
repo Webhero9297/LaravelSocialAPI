@@ -493,3 +493,46 @@ profile | array | profile data
     }
 }
 ```
+
+### 21. Get Distributors
+####  Action: Get Distributor list 
+#### This API can be called from Authed or unauthed user
+
+**route:** /get_distributors
+
+**request param:**
+param name | type | description
+---------- | ---- | -------
+search_filter | string | Optional, if omitted, it will be 'all', This field must be in one of [all, top_rated, suggested, favorites]
+pos | int | Optional, if omitted, it will be 0, 0, 20, 40, 60, ,,,
+limit | int | Optional, if omitted, it will be 20, 
+
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+profile | array | profile data
+
+```
+{
+    "success": true,
+    "data": [
+        {
+            "distributor_id": 7,
+            "name": "User5",
+            "photo": "http://192.168.1.12:5000/public/uploads/public_profiles/profile_avatar_1585662833_608928871.jpg",
+            "rate_count": 2,
+            "avg_score": "5.0",
+            "product_count": 5,
+            "pending_orders_count": 5,
+            "processed_order_count": 1,
+            "last_delivery_date": "2020-04-01 18:14:20",
+            "like_status": 1,
+            "like_date": "2020-03-31 19:37:13"
+        },
+        ,,,
+    ]
+}
+```
