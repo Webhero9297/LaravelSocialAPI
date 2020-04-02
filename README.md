@@ -184,7 +184,7 @@ photo | file array | product photo (optional)
 price | float | price (optional) - if omitted, price will be setted 0.
 stock | float | stock (optional) - if omitted, stock will be setted 0.
 discount_percentage | float | discount_percentage (optional) - if omitted, dicount_percentage will be setted 0.
-discription | float | discription (optional) - if omitted, description will be setted 0.
+description | string | description (optional) - if omitted, description will be setted ''
 
 **response param**
 param | type | description
