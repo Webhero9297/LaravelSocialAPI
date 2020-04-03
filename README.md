@@ -682,3 +682,71 @@ param | type | description
 success | bool | true - success, false - fail
 error | array | error status - [code, message]
 profile | array | profile data
+
+### 26. Get products list of distributor
+####  Action: Get products list of distributor
+#### This is Authorization or Non-Authorization API
+
+**route:** /get_products
+
+**request param:**
+param | type | description
+----- | ---- | -------
+search_filter | string | Optional, if omitted, it will be 'all', This field must be in one of [all, popular, onsale, favorites]
+pos | int | Optional, if omitted, it will be 0, 0, 20, 40, 60, ,,,
+limit | int | Optional, if omitted, it will be 20, 
+
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+profile | array | profile data
+
+```
+{
+    "success": true,
+    "data": [
+        {
+            "product_id": 1,
+            "name": "Food 1",
+            "description": "This product is for youth",
+            "price": 2,
+            "stock": 10,
+            "unit": "1L",
+            "discount_percentage": 0,
+            "date": 1585825261,
+            "distributor_name": "User5",
+            "saled_count": 9,
+            "likes_count": 0,
+            "is_liked": 0,
+            "product_photos": [
+                "http://192.168.1.12:5000/public/uploads/products/product_avatar_1585672441_2067187511.jpg",
+                "http://192.168.1.12:5000/public/uploads/products/product_avatar_1585672492_944178197.jpg",
+                "http://192.168.1.12:5000/public/uploads/unknown_product.png"
+            ]
+        },
+        ...
+        {
+            "product_id": 4,
+            "name": "Food 4",
+            "description": "Food 4 Description",
+            "price": 20,
+            "stock": 40,
+            "unit": "1L",
+            "discount_percentage": 0,
+            "date": 1585644330,
+            "distributor_name": "User5",
+            "saled_count": 3.3,
+            "likes_count": 1,
+            "is_liked": 0,
+            "product_photos": [
+                "http://192.168.1.12:5000/public/uploads/products/product_avatar_1585672558_75571139.jpg",
+                "http://192.168.1.12:5000/public/uploads/products/product_avatar_1585672563_1270723162.jpg",
+                "http://192.168.1.12:5000/public/uploads/unknown_product.png"
+            ]
+        }
+    ]
+}
+```
