@@ -506,6 +506,7 @@ param name | type | description
 search_filter | string | Optional, if omitted, it will be 'all', This field must be in one of [all, top_rated, suggested, favorites]
 pos | int | Optional, if omitted, it will be 0, 0, 20, 40, 60, ,,,
 limit | int | Optional, if omitted, it will be 20, 
+search_string | int | Optional, search with name
 
 
 **response param**
@@ -695,6 +696,7 @@ param | type | description
 search_filter | string | Optional, if omitted, it will be 'all', This field must be in one of [all, popular, onsale, favorites]
 pos | int | Optional, if omitted, it will be 0, 0, 20, 40, 60, ,,,
 limit | int | Optional, if omitted, it will be 20, 
+search_string | int | Optional, search with name
 
 
 **response param**
