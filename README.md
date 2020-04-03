@@ -258,27 +258,38 @@ message | string | action result message string
 **request param:**
 param name | type | description
 ---------- | ---- | -------
-distributor_id | int | distributor_id
-order_id | string | If 'NULL' - Insert, else int - update, otherwise - exception. this field is optional. But if omitted, API will perform insert action.
-order_product | json array | JSON format of order product.
+order_data | string | JSON formatted order data
 
-order_product ex: ) 
+order_data ex: ) 
 ```
-  [
-    {
-      "order_product_id": "NULL", ---> Insert, if this item is omitted, Insert
-      "product_id": 2,
-      "price": 2,
-      "count": 1,
-      "product_name": "Food 1"
+  {
+    "7": {
+        "order_product": [
+        {
+            "product_id": 2,
+            "price": 2,
+            "count": 1,
+            "product_name": "Food 1"
+        },
+        {
+            "product_id": 3,
+            "price": 20,
+            "count": 2,
+            "product_name": "Food 2"
+        }
+        ]  
     },
-    {
-      "product_id": 3, ---> Update
-      "price": 20,
-      "count": 2,
-      "product_name": "Food 2"
+    "10": {
+        "order_product": [
+        {
+            "product_id": 6,
+            "price": 2,
+            "count": 1,
+            "product_name": "Food 1"
+        }
+        ]  
     }
-  ]
+  }
 ```
 **response param**
 param | type | description
