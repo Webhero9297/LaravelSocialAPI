@@ -84,7 +84,10 @@ status | success | message
 **route:** /logout
 
 **request param:**
-NONE
+param | type | description
+----- | ---- | -------
+token | string | Authoriation token string(Bearer)
+
 
 **response param**
 param | type | description
@@ -763,3 +766,47 @@ profile | array | profile data
     ]
 }
 ```
+
+### 27. Get active order list
+####  Action: Get all active order list(requested, dispatched, arrived) of current auth user
+#### This is Authorization API
+
+**route:** /get_active_orders_for_user
+
+**request param:**
+param | type | description
+----- | ---- | -------
+search_filter | string | Optional, if omitted, it will be 'all', This field must be in one of [all, popular, onsale, favorites]
+pos | int | Optional, if omitted, it will be 0, 0, 20, 40, 60, ,,,
+limit | int | Optional, if omitted, it will be 20, 
+search_string | int | Optional, search with name
+
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+profile | array | profile data
+
+### 28. Get archived order list
+####  Action: Get all archived order list(received, cancelled) of current auth user
+#### This is Authorization API
+
+**route:** /get_archived_orders_for_user
+
+**request param:**
+param | type | description
+----- | ---- | -------
+search_filter | string | Optional, if omitted, it will be 'all', This field must be in one of [all, popular, onsale, favorites]
+pos | int | Optional, if omitted, it will be 0, 0, 20, 40, 60, ,,,
+limit | int | Optional, if omitted, it will be 20, 
+search_string | int | Optional, search with name
+
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+profile | array | profile data
