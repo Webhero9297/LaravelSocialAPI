@@ -810,3 +810,54 @@ param | type | description
 success | bool | true - success, false - fail
 error | array | error status - [code, message]
 profile | array | profile data
+
+
+### 29. Get retrieve status
+####  Action: Get retrieve status of authed user and update is_available_payment in DB
+#### This is Authorization API
+
+**route:** /retrieve_account
+
+**request param:**
+
+NONE
+
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+profile | array | profile data
+
+```
+{
+    "success": true,
+    "is_available_payment": 0
+}
+```
+
+### 30. Get account link
+####  Action: Get stripe account link of authed user based on is_available_payment in DB
+#### This is Authorization API
+
+**route:** /request_account_link
+
+**request param:**
+
+NONE
+
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+profile | array | profile data
+
+```
+{
+    "success": true,
+    "account_link": "https://connect.stripe.com/setup/c/RP79sVlbywjK"
+}
+```
