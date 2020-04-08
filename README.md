@@ -262,6 +262,7 @@ message | string | action result message string
 param name | type | description
 ---------- | ---- | -------
 order_data | string | JSON formatted order data
+stripe_token | string | user stripe token
 
 order_data ex: ) 
 ```
@@ -861,3 +862,42 @@ profile | array | profile data
     "account_link": "https://connect.stripe.com/setup/c/RP79sVlbywjK"
 }
 ```
+
+### 31. Attach payment method
+####  Action: Attach payment method to distributor stripe account
+#### This is Authorization API
+
+**route:** /attach_payment_method
+
+**request param:**
+param | type | description
+----- | ---- | -------
+_token | string | stripe token
+
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+profile | array | profile data
+
+
+### 32. Get distributor detail info
+####  Action: get distributor detail
+#### This is Unauthorization API
+
+**route:** /get_ditributor_detail
+
+**request param:**
+param | type | description
+----- | ---- | -------
+distributor_id | int | distributor_id
+
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+profile | array | profile data
