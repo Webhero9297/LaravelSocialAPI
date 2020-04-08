@@ -872,7 +872,7 @@ profile | array | profile data
 **request param:**
 param | type | description
 ----- | ---- | -------
-_token | string | stripe token
+token | string | stripe token
 
 
 **response param**
@@ -916,7 +916,7 @@ param | type | description
 order_id | int | order id(unique string)
 order_status | int | order status [1 - requested ,2 - dispatched, 3 - arrived, 4 - received, 5 - cancelled]
 
-**If order_status is 4, holded charged order action will be captured by system
+**If order_status is 4, holded charged order action will be released by system**
 
 **response param**
 param | type | description
