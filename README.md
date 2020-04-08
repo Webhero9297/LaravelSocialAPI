@@ -901,3 +901,26 @@ param | type | description
 success | bool | true - success, false - fail
 error | array | error status - [code, message]
 profile | array | profile data
+
+
+
+### 33. Change Order Status
+####  Action: Change order status
+#### This is Authorization API
+
+**route:** /change_order_status
+
+**request param:**
+param | type | description
+----- | ---- | -------
+order_id | int | order id(unique string)
+order_status | int | order status [1 - requested ,2 - dispatched, 3 - arrived, 4 - received, 5 - cancelled]
+
+**If order_status is 4, holded charged order action will be captured by system
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+profile | array | profile data
