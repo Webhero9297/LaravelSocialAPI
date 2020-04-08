@@ -677,7 +677,7 @@ param | type | description
 ----- | ---- | -------
 success | bool | true - success, false - fail
 error | array | error status - [code, message]
-profile | array | profile data
+reviews | array | profile data
 
 ### 25. Get products info of distributor
 ####  Action: Get products info of distributor
@@ -697,7 +697,7 @@ param | type | description
 ----- | ---- | -------
 success | bool | true - success, false - fail
 error | array | error status - [code, message]
-profile | array | profile data
+products | array | profile data
 
 ### 26. Get products list of distributor
 ####  Action: Get products list of distributor
@@ -719,7 +719,7 @@ param | type | description
 ----- | ---- | -------
 success | bool | true - success, false - fail
 error | array | error status - [code, message]
-profile | array | profile data
+products | array | profile data
 
 ```
 {
@@ -788,7 +788,7 @@ param | type | description
 ----- | ---- | -------
 success | bool | true - success, false - fail
 error | array | error status - [code, message]
-profile | array | profile data
+orders | array | profile data
 
 ### 28. Get archived order list
 ####  Action: Get all archived order list(received, cancelled) of current auth user
@@ -810,7 +810,7 @@ param | type | description
 ----- | ---- | -------
 success | bool | true - success, false - fail
 error | array | error status - [code, message]
-profile | array | profile data
+orders | array | profile data
 
 
 ### 29. Get retrieve status
