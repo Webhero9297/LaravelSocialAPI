@@ -887,7 +887,7 @@ profile | array | profile data
 ####  Action: get distributor detail
 #### This is Unauthorization API
 
-**route:** /get_ditributor_detail
+**route:** /get_distributor_detail
 
 **request param:**
 param | type | description
