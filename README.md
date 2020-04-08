@@ -854,7 +854,6 @@ param | type | description
 ----- | ---- | -------
 success | bool | true - success, false - fail
 error | array | error status - [code, message]
-profile | array | profile data
 
 ```
 {
@@ -880,7 +879,7 @@ param | type | description
 ----- | ---- | -------
 success | bool | true - success, false - fail
 error | array | error status - [code, message]
-profile | array | profile data
+message | array | message
 
 
 ### 32. Get distributor detail info
@@ -923,4 +922,3 @@ param | type | description
 ----- | ---- | -------
 success | bool | true - success, false - fail
 error | array | error status - [code, message]
-profile | array | profile data
