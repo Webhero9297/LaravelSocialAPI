@@ -767,7 +767,7 @@ products | array | profile data
 }
 ```
 
-### 27. Get active order list
+### 27. Get active order list(deprecated)
 ####  Action: Get all active order list(requested, dispatched, arrived) of current auth user
 #### This is Authorization API
 
@@ -789,7 +789,7 @@ success | bool | true - success, false - fail
 error | array | error status - [code, message]
 orders | array | profile data
 
-### 28. Get archived order list
+### 28. Get archived order list(deprecated)
 ####  Action: Get all archived order list(received, cancelled) of current auth user
 #### This is Authorization API
 
@@ -1036,3 +1036,26 @@ address_list | array | address array
     ]
 }
 ```
+
+
+### 36. Get order list
+####  Action: Get order list(requested, dispatched, arrived) of current auth user
+#### This is Authorization API and this is API for user.
+
+**route:** /get_order_list_in_user
+
+**request param:**
+param | type | description
+----- | ---- | -------
+pos | int | Optional, if omitted, it will be 0, 0, 20, 40, 60, ,,,
+limit | int | Optional, if omitted, it will be 20, 
+search_string | int | Optional, search with name
+filter | string | Option, default 1
+
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+orders | array | profile data
