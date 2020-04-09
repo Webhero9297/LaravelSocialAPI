@@ -273,13 +273,11 @@ order_data ex: )
         "order_product": [
         {
             "product_id": 2,
-            "price": 2,
             "count": 1,
             "product_name": "Food 1"
         },
         {
             "product_id": 3,
-            "price": 20,
             "count": 2,
             "product_name": "Food 2"
         }
@@ -289,7 +287,6 @@ order_data ex: )
         "order_product": [
         {
             "product_id": 6,
-            "price": 2,
             "count": 1,
             "product_name": "Food 1"
         }
