@@ -263,6 +263,9 @@ param name | type | description
 ---------- | ---- | -------
 order_data | string | JSON formatted order data
 stripe_token | string | user stripe token
+bill_name | string | name
+bill_address | string | address
+bill_phone_number | string | phone_number
 
 order_data ex: ) 
 ```
@@ -922,3 +925,119 @@ param | type | description
 ----- | ---- | -------
 success | bool | true - success, false - fail
 error | array | error status - [code, message]
+
+### 34. Insert/Update User Address
+####  Action: Insert/Update User Address
+#### This is Authorization API
+
+**route:** /upsert_my_address
+
+**request param:**
+param | type | description
+----- | ---- | -------
+address_id | string | address_id(if 'NULL', insert action, otherwise update action)
+name | string | name(if address_id is 'NULL', explicit else optional)
+address_line | string | address_line(if address_id is 'NULL', explicit else optional)
+city | string | city(if address_id is 'NULL', explicit else optional)
+state | string | state(if address_id is 'NULL', explicit else optional)
+postal_code | string | postal_code(if address_id is 'NULL', explicit else optional)
+phone_number | string | phone_number(if address_id is 'NULL', explicit else optional)
+
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+address | array | insert/updated address array
+
+```
+{
+    "success": true,
+    "address":
+        {
+            "id": 3,
+            "user_id": 1,
+            "name": "Name3",
+            "address_line": "KuiLong",
+            "city": "HONGKONG",
+            "state": "HK SAR",
+            "postal_code": "HK1234",
+            "phone_number": "1801801802",
+            "created_at": 1586440040,
+            "updated_at": 1586440382
+        }
+    ]
+}
+```
+
+
+### 35. delete User Address
+####  Action: delete User Address
+#### This is Authorization API
+
+**route:** /delete_my_address
+
+**request param:**
+param | type | description
+----- | ---- | -------
+address_id | int | address_id
+
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+deleted_address_id | int | 
+
+### 36. Get User Address list
+####  Action: User Address list
+#### This is Authorization API
+
+**route:** /get_address_list
+
+**request param:**
+param | type | description
+----- | ---- | -------
+
+NONE
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+address_list | array | address array
+
+```
+{
+    "success": true,
+    "address_list": [
+        {
+            "id": 3,
+            "user_id": 1,
+            "name": "Name3",
+            "address_line": "KuiLong",
+            "city": "HONGKONG",
+            "state": "HK SAR",
+            "postal_code": "HK1234",
+            "phone_number": "1801801802",
+            "created_at": 1586440040,
+            "updated_at": 1586440382
+        },
+        {
+            "id": 1,
+            "user_id": 1,
+            "name": "Name1",
+            "address_line": "DongNan",
+            "city": "HONGKONG",
+            "state": "HK SAR",
+            "postal_code": "HK1234",
+            "phone_number": "1234567890",
+            "created_at": 1586439834,
+            "updated_at": 1586439834
+        }
+    ]
+}
+```
