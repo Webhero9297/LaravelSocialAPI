@@ -1042,7 +1042,7 @@ address_list | array | address array
 ####  Action: Get order list(requested, dispatched, arrived) of current auth user
 #### This is Authorization API and this is API for user.
 
-**route:** /get_order_list_in_user
+**route:** /get_order_list
 
 **request param:**
 param | type | description
