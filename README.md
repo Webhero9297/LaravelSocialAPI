@@ -263,8 +263,8 @@ param name | type | description
 ---------- | ---- | -------
 order_data | string | JSON formatted order data
 token | string | user stripe token
-bill_name | string | name
-bill_address | string | address
+b_name | string | name
+b_address | string | address
 
 order_data ex: ) 
 ```
