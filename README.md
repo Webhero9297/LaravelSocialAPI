@@ -262,7 +262,7 @@ message | string | action result message string
 param name | type | description
 ---------- | ---- | -------
 order_data | string | JSON formatted order data
-stripe_token | string | user stripe token
+token | string | user stripe token
 bill_name | string | name
 bill_address | string | address
 
