@@ -265,7 +265,6 @@ order_data | string | JSON formatted order data
 stripe_token | string | user stripe token
 bill_name | string | name
 bill_address | string | address
-bill_phone_number | string | phone_number
 
 order_data ex: ) 
 ```
@@ -941,7 +940,6 @@ address_line | string | address_line(if address_id is 'NULL', explicit else opti
 city | string | city(if address_id is 'NULL', explicit else optional)
 state | string | state(if address_id is 'NULL', explicit else optional)
 postal_code | string | postal_code(if address_id is 'NULL', explicit else optional)
-phone_number | string | phone_number(if address_id is 'NULL', explicit else optional)
 
 
 **response param**
