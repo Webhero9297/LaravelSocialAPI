@@ -268,31 +268,30 @@ b_address | string | address
 
 order_data ex: ) 
 ```
-  {
-    "7": {
-        "order_product": [
-        {
-            "product_id": 2,
-            "count": 1,
-            "product_name": "Food 1"
-        },
-        {
-            "product_id": 3,
-            "count": 2,
-            "product_name": "Food 2"
-        }
-        ]  
-    },
-    "10": {
-        "order_product": [
-        {
-            "product_id": 6,
-            "count": 1,
-            "product_name": "Food 1"
-        }
-        ]  
+    {
+        "7": [
+                {
+                "product_id": 2,
+                "price": 20,
+                "count": 5,
+                "product_name": "Food 1"
+            },
+                {
+                "product_id": 3,
+                "price": 20,
+                "count": 2,
+                "product_name": "Food 2"
+            }
+        ],
+        "10": [
+            {
+                "product_id": 6,
+                "price": 20,
+                "count": 1,
+                "product_name": "Toast"
+            }
+        ]
     }
-  }
 ```
 **response param**
 param | type | description
