@@ -1109,3 +1109,30 @@ account_info | array | payouts and charges info array
     }
 }
 ```
+
+### 38. Get order detail
+####  Action: Get order detail - products and status history
+#### This is Authorization API.
+
+**route:** /get_order_detail
+
+**request param:**
+param | type | description
+----- | ---- | -------
+order_id | string | 20 digit order id string  
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+account_info | array | payouts and charges info array
+```
+{
+    "success": true,
+    "account_info": {
+        "charges_enabled": true,
+        "payouts_enabled": true
+    }
+}
+```
