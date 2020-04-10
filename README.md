@@ -1105,7 +1105,6 @@ account_info | array | payouts and charges info array
     "success": true,
     "account_info": {
         "charges_enabled": true,
-        "payouts_enabled": true
     }
 }
 ```
@@ -1126,13 +1125,40 @@ param | type | description
 ----- | ---- | -------
 success | bool | true - success, false - fail
 error | array | error status - [code, message]
-account_info | array | payouts and charges info array
+products | array | products array in order
+statuses | array | status history array in order
 ```
 {
     "success": true,
-    "account_info": {
-        "charges_enabled": true,
-        "payouts_enabled": true
-    }
+    "products": [
+        {
+            "order_product_id": 42,
+            "product_id": 2,
+            "count": 5,
+            "product_name": "Food 1",
+            "status": -1,
+            "date": 1586492244,
+            "price": 20,
+            "discount_percentage": 0,
+            "unit": "1L",
+            "product_photos": [
+                {
+                    "id": 9,
+                    "url": "http://192.168.1.12:5000/public/uploads/products/product_avatar_1585672518_1757359513.jpg"
+                },
+                {
+                    "id": 16,
+                    "url": "http://192.168.1.12:5000/public/uploads/unknown_product.png"
+                }
+            ]
+        },
+        ...
+    ],
+    "statuses": [
+        {
+            "status_code": 1,
+            "data": 1586492244
+        }
+    ]
 }
 ```
