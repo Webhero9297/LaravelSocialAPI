@@ -299,6 +299,15 @@ success | bool | true - success, false - fail
 error | array | error status - [code, message]
 result | string | action result message string
 
+```
+result: 
+
+[
+    7: [ succes: true, order_id: 'XXXXX...XXX' ],
+    10: [ success: false, error:[ code: 6006, message: "XXXXXXX"] ]
+]
+```
+
 ### 11. Delete Order API
 ####  Action: delete the specific order that the current user made.
 #### This API is valid for the only users of which is_distributor is 0. Otherwise, exception will occur.
