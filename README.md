@@ -9,6 +9,8 @@ Code | description
 6002 | Invalid distributor
 6003 | Order fail
 6004 | Bad request
+6005 | no result
+6006 | unknown error
 
 ## UnAuthorized API List
 ### 1. Register
@@ -295,7 +297,7 @@ param | type | description
 ----- | ---- | -------
 success | bool | true - success, false - fail
 error | array | error status - [code, message]
-message | string | action result message string
+result | string | action result message string
 
 ### 11. Delete Order API
 ####  Action: delete the specific order that the current user made.
