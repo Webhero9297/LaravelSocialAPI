@@ -297,7 +297,7 @@ param | type | description
 ----- | ---- | -------
 success | bool | true - success, false - fail
 error | array | error status - [code, message]
-result | string | action result message string
+result | array | array
 
 ```
 result: 
@@ -306,6 +306,20 @@ result:
     7: [ succes: true, order_id: 'XXXXX...XXX' ],
     10: [ success: false, error:[ code: 6006, message: "XXXXXXX"] ]
 ]
+
+{
+    "success": true,
+    "result": {
+        "7": {
+            "success": true,
+            "order_id": "15864917624747819511"
+        },
+        "10": {
+            "success": true,
+            "order_id": "15864917664870315292"
+        }
+    }
+}
 ```
 
 ### 11. Delete Order API
@@ -1066,3 +1080,32 @@ param | type | description
 success | bool | true - success, false - fail
 error | array | error status - [code, message]
 orders | array | profile data
+
+
+
+### 37. Get stripe account status
+####  Action: Get stripe account payouts_enabled and charge_enabled status
+#### This is NON-Authorization API.
+
+**route:** /stripe_account_status
+
+**request param:**
+param | type | description
+----- | ---- | -------
+distributor_id | int | distributor id 
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+account_info | array | payouts and charges info array
+```
+{
+    "success": true,
+    "account_info": {
+        "charges_enabled": true,
+        "payouts_enabled": true
+    }
+}
+```
