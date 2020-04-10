@@ -270,12 +270,12 @@ order_data ex: )
 ```
     {
         "7": [
-                {
+            {
                 "product_id": 2,
                 "count": 5,
                 "product_name": "Food 1"
             },
-                {
+            {
                 "product_id": 3,
                 "count": 2,
                 "product_name": "Food 2"
