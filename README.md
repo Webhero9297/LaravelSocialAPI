@@ -341,6 +341,7 @@ message | string | action result message string
 **request param:**
 param name | type | description
 ---------- | ---- | -------
+order_id | string | 20 digit order_id string
 order_product_id | int | order_product_id
 product_status | int | product_status (0, 1)
 
