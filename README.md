@@ -1213,3 +1213,22 @@ param | type | description
 success | bool | true - success, false - fail
 error | array | error status - [code, message]
 data | array | delete action result array
+
+
+### 42. Stripe account balance
+####  Action: get Stripe account balance
+#### This is Non-Authorization API.
+
+**route:** /stripe_balance
+
+**request param:**
+
+NONE
+
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+data | array | delete action result array
