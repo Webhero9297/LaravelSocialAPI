@@ -55,30 +55,22 @@ token | token string | -
 #### Social Login API
 
 **route:**
-{Prefix}/social/redirect/{provider}
-#### Provider - [apple, google, facebook, twitter]
+/social/auth/{provider}
+#### Provider - [apple, google, facebook]
 
 **request param:**
-NONE
+param | type | description
+----- | ---- | -------
+token | string | token[facebook - access token, google - idToken, apple - ]
+
 
 **response param**
-response result format is the same with login
+param | type | description
+----- | ---- | -------
+success | bool | true - 200, false - error
+error | array | [code, message]
+token | token string | -
 
-These APIs are unathorized APIs, so when use these apis on the endpoint, don't worry about the authorized token.
-
-## Authorized API List
-When use the follwing apis, you have to define 'Authorization' item in the request header.
-refer this screen.
-
-![Screen](/images/header_authorized.png)
-
-Regarding 'Authorization' header item, when these apis are called on the endpoint, exceptions occured from the backend
-
-status | success | message
------- | ------- | -------
-401 | false | Token is Invalid
-402 | false | Token is Expired
-403 | false | Authorization Token is not found
 
 ### 1. Logout
 #### User logout API
@@ -606,8 +598,9 @@ profile | array | profile data
 **route:** /get_my_products
 
 **request param:**
-
-NONE
+param | type | description
+----- | ---- | -------
+search_string | string | Optional
 
 
 **response param**
