@@ -1154,3 +1154,23 @@ statuses | array | status history array in order
     ]
 }
 ```
+
+
+### 39. Payout 
+####  Action:Payout
+#### This is Authorization API.
+
+**route:** /payout
+
+**request param:**
+param | type | description
+----- | ---- | -------
+amount | double | payout amount
+
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+message | string | Message
