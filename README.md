@@ -67,10 +67,9 @@ token | string | token[facebook - access token, google - idToken, apple - ]
 **response param**
 param | type | description
 ----- | ---- | -------
-success | bool | true - 200, false - error
-error | array | [code, message]
-token | token string | -
-
+success | bool | true - register successfully, false - fail
+error | string | error - [code, message]
+token | string | token string
 
 ### 1. Logout
 #### User logout API
