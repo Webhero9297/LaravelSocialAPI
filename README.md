@@ -1174,3 +1174,42 @@ param | type | description
 success | bool | true - success, false - fail
 error | array | error status - [code, message]
 message | string | Message
+
+### 40. get list of all payment method 
+####  Action: Get list of all payment method
+#### This is Authorization API.
+
+**route:** /list_payment_methods
+
+**request param:**
+param | type | description
+----- | ---- | -------
+type | string | 'bank' or 'card'
+
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+list | array | payment methods list array(refernece: https://stripe.com/docs/api/external_account_bank_accounts/list)
+
+
+### 41. Delete payment method 
+####  Action: Delete the specific payment method
+#### This is Authorization API.
+
+**route:** /delete_payment_method
+
+**request param:**
+param | type | description
+----- | ---- | -------
+payment_id | string | payment id in the above list
+
+
+**response param**
+param | type | description
+----- | ---- | -------
+success | bool | true - success, false - fail
+error | array | error status - [code, message]
+data | array | delete action result array
