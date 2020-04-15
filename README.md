@@ -1,6 +1,5 @@
 # LaravelSocialAPI
 
-- BASE URL = http://aiv.goldserviceweb.com
 
 - Prefix = {BASE URL}/api
 
